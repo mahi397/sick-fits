@@ -45,10 +45,33 @@ _app.js shows what to do!
 
 c. custom html document layout - `pages/_document.js`
 need a custom doc to do custom html attributes and the ability to stick our css inside of the head
-Correction -- it should be called `Document` not MyDocument!!
 
 -------------------------------------
 Putting the Header Text (Sick Fits) inside a <a href="/"> while cause page refresh on each click. 
 But what we want is to move from page to page as fast as poss w/o having to refresh the entire page.
 NextJS uses a combination of HTML5 push state (changing the URL) AND the ability to trigger a rerender of the page on URL change.
 So instead of using the traditional <a href> tag, we'll use <Link href> tag from nextjs
+
+SEXY STUFF - 
+multi-line editing in vs code!
+(ref Nav.js)
+write 4 words in separate lines
+bring cursor to beginning of first line first word
+cmd+opt+down to select all 4
+start typing <Link href="
+shift+opt+right to select the entire word
+cmd+c copy the word
+right arrow
+type ">
+cmd+v paste the word
+shift+opt+left to select word again
+left arrow to come to start of the word
+shift+right to select the first char
+ctrl+opt+u (added key binding to turn to uppercase!!!!)
+
+!!!!!!!!!!!!!
+
+Anytime you wanna link to sth that is part of your website, use the <Link> tag.
+wanna link to sth that is outside of your website, use a regular <a>
+
+Note::: Use class instead of function in _document because the project is using a version of next that might not support function. We'll see if it breaks.
