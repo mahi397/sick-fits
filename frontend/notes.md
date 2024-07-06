@@ -14,3 +14,10 @@ export default function Page({ children }) {
 }
 ```
 propTypes -- used with Typescript
+
+-------------------------
+Do I have to go into each component and wrap its intro para tag inside <Page>?
+Is there a way to have each `page` automatically wrapped inside it, like a preset template?
+
+YES!
+
