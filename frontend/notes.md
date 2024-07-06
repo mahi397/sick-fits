@@ -46,3 +46,9 @@ _app.js shows what to do!
 c. custom html document layout - `pages/_document.js`
 need a custom doc to do custom html attributes and the ability to stick our css inside of the head
 Correction -- it should be called `Document` not MyDocument!!
+
+-------------------------------------
+Putting the Header Text (Sick Fits) inside a <a href="/"> while cause page refresh on each click. 
+But what we want is to move from page to page as fast as poss w/o having to refresh the entire page.
+NextJS uses a combination of HTML5 push state (changing the URL) AND the ability to trigger a rerender of the page on URL change.
+So instead of using the traditional <a href> tag, we'll use <Link href> tag from nextjs
