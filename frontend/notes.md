@@ -30,14 +30,18 @@ YES!
 In next.js there are 2 special files which allow us to get access to 
 1 - everything inside of the BODY
 2 - evthing in the HEAD of the document
+
 Special stuff in next.js --
 a. you must have a pages directory with your pages in it
 b. if u wanna control anything a little higher than the Page component you can do it in `pages/_app.js` file.
 _app.js shows what to do!
 
-Note: gotta do a refresh after adding the _app.js for stuff to work!
+        Note: gotta do a refresh after adding the _app.js or _document.js for changes to show up!
 
-Page.js has the page definition. It'll always render an h2 intro and then the respective page content (ie children of the page)
+        Page.js has the page definition. It'll always render an h2 intro and then the respective page content (ie children of the page)
 
-_app.js says any component page will be rendered as <Page><Component itsProps></Page>
-So the render of a page like sell will show the Page's definition followed by the component page's stuff
+        _app.js says any component page will be rendered as <Page><Component itsProps></Page>
+        So the render of a page like sell will show the Page's definition followed by the component page's stuff
+
+c. custom html document layout - `pages/_document.js`
+need a custom doc to do custom html attributes and the ability to stick our css inside of the head
