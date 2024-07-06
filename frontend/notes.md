@@ -45,3 +45,4 @@ _app.js shows what to do!
 
 c. custom html document layout - `pages/_document.js`
 need a custom doc to do custom html attributes and the ability to stick our css inside of the head
+Correction -- it should be called `Document` not MyDocument!!
