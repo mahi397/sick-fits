@@ -86,4 +86,29 @@ can use JS values inside CSS
 create an h1 component with the styles already attached to it rather than giving it a class and writing styles there.
 that would immediately scope all of those styles to that h1
 
+* var is to create a variable in css.
+`var(--nameOfVariable, fallbackValueOfVariable)`
+
 Right now, there's a flicker showing base styles on refresh. Will be fixed using server-side rendering.
+
+
+Global Styles: for basic stuff like colors fonts sizing etc which u want set globally.
+Use GlobalStyles API in Page.js
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+```
+*, *:before, *:after: This is a CSS selector that targets all elements (*), as well as their :before and :after pseudo-elements.
+
+box-sizing: inherit: This sets the box-sizing property of the selected elements to inherit.
+
+Inheritance: By setting box-sizing: inherit, you're telling all elements (*) and their :before and :after pseudo-elements to inherit the box-sizing property from their parent element. This creates a consistent box-sizing behavior across the entire document.
+
+Global Consistency: Typically, developers will set a box-sizing value on the root element (like html or body), and then use this rule to ensure that all elements inherit that value. 
+
+This helps to avoid common issues with width calculations and ensures a more predictable layout behavior.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
