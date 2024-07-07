@@ -116,3 +116,9 @@ At route changes (when you click one of the nav links) if the net is slow or for
 `NProgress` is for exactly that. It's a quick animation of a slim progress bar typically at the top of the page signifying that the page is loading.
 
 we'll start it as soon as our link starts & finish when the page transition is done.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Resolving the Flicker(flash of unstyled content) on server render
+- occurs because styles aren't rendered on the server
+`ServerStyleSheet` is used for resolving this.
+getInitialProps will wait until that method has been resolved before it sends the data from the server to the browser.
