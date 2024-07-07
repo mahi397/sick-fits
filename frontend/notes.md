@@ -75,3 +75,15 @@ Anytime you wanna link to sth that is part of your website, use the <Link> tag.
 wanna link to sth that is outside of your website, use a regular <a>
 
 Note::: Use class instead of function in _document because the project is using a version of next that might not support function. We'll see if it breaks.
+
+--------------------------------------
+Styled Components: CSS in JS
+Scoped CSS
+
+define all CSS in components as well
+can use JS values inside CSS
+
+create an h1 component with the styles already attached to it rather than giving it a class and writing styles there.
+that would immediately scope all of those styles to that h1
+
+Right now, there's a flicker showing base styles on refresh. Will be fixed using server-side rendering.
