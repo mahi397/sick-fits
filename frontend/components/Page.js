@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
 
 const GlobalStyles = createGlobalStyle`
@@ -43,20 +43,24 @@ button {
 }
 `;
 
-export default function Page({ children, cool }) {
+const InnerStyles = styled.div`
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: 2rem;
+`;
+
+export default function Page({ children }) {
   return (
     <div>
       <GlobalStyles /> {/** simply inject the component */}
       <Header />
-      <h2>I am the page component</h2>
-      <h3>{cool}</h3>
-      {children}
+      <InnerStyles>{children}</InnerStyles>
     </div>
   );
 }
 /** for error that comes up in props argument */
 Page.propTypes = {
-  cool: PropTypes.string,
+  // cool: PropTypes.string,
   // children: PropTypes.arrayOf(PropTypes.node), --- if we want multiple nodes as the children
   children: PropTypes.any,
   /* --- better alternative cause children can be anything! */
