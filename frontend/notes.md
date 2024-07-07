@@ -112,3 +112,7 @@ Global Consistency: Typically, developers will set a box-sizing value on the roo
 This helps to avoid common issues with width calculations and ensures a more predictable layout behavior.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+At route changes (when you click one of the nav links) if the net is slow or for some reason the site is loading slowly, we need to tell the user that.
+`NProgress` is for exactly that. It's a quick animation of a slim progress bar typically at the top of the page signifying that the page is loading.
+
+we'll start it as soon as our link starts & finish when the page transition is done.
